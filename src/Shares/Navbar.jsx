@@ -63,7 +63,7 @@ const Navbar = () => {
             </div>
  
                 <div 
-                className={`bg-black w-64 mainFont rounded-xl p-6 mt-52 absolute  ${show ? " right-3 -top-36 duration-500" :  "-top-[500px] duration-500 right-0  "} `}
+                className={`bg-black w-64 mainFont rounded-xl p-6 mt-52 absolute z-20 ${show ? " right-3 -top-36 duration-500" :  "-top-[500px] duration-500 right-0  "} `}
                 > 
 
                
@@ -75,7 +75,9 @@ const Navbar = () => {
 
                 <hr  className='mt-3'/> 
 
-                <p className='mt-3 flex items-center text-white text-2xl gap-1'><Icon icon="uim:chart" className='text-white  text-4xl'  />DashBoard</p>
+               <Link to="/dashboard">
+               <p className='mt-3 flex items-center text-white text-2xl gap-1'><Icon icon="uim:chart" className='text-white  text-4xl'  />DashBoard</p>
+               </Link>
                  
 
                 </div>

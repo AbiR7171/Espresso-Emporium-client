@@ -6,6 +6,7 @@ import Chef from "../Pages/Components/Chef";
 import Main from "../Layouts/Main";
 import AllCoffee from "../Pages/Components/AllCoffee";
 import SingleCoffee from "../Pages/Components/SingleCoffee";
+import DashBoardLayout from "../Layouts/DashBoardLayout";
 
 
 
@@ -34,6 +35,16 @@ const router = createBrowserRouter([
                 loader:({params})=> fetch(`http://localhost:5000/coffee/${params.id}`)
             }
         ]
+    }, 
+    {
+          path:'/dashboard',
+          element:<DashBoardLayout/>,
+          children:[
+             {
+                 path:"/dashboard/home",
+                 
+             }
+          ]
     },
     {
         path:"/signUp",

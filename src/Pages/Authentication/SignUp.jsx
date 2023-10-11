@@ -40,7 +40,8 @@ const SignUp = () => {
           name,
           email,
           photo,
-          date: moment().format("DD, mm, YYYY")
+          date: moment().format("DD, mm, YYYY"),
+          role:"user",
       })
       .then(res =>{
             console.log(res.data);

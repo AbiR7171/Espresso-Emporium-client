@@ -65,4 +65,9 @@ body{
 .lastFont{
   font-family: 'Dancing Script', cursive;
 
+} 
+
+
+.bgDashBoard{
+  background: rgba(61, 41, 208, 1);
 }

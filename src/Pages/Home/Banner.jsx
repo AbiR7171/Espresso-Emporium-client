@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -13,9 +14,12 @@ const Banner = () => {
                <p className='text-gray-500'>
                 It's coffee time - Sip & Savor - Relaxation in every sip! Get the nostalgia back!! Your companion of every moment!!! Enjoy the beautiful moments and make them memorable.</p>
 
-               <button className='bg-[#E3B577] text-[#242222] p-3 rounded font-serif'>
+              <Link to="/allCoffee">
+              
+                <button className='bg-[#E3B577] text-[#242222] p-3 rounded font-serif'>
                 Learn More
                 </button>
+              </Link>
 
            </div>
 
