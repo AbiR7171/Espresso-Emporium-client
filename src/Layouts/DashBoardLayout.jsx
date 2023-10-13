@@ -3,20 +3,36 @@ import { Link, Outlet } from "react-router-dom";
 import logo from "../assets/images/more/logo1.png"
 import { AuthContext } from "../Route/AuthProvidor";
 import { Icon } from '@iconify/react';
+import axios from "axios";
 
 const DashBoardLayout = () => { 
 
   //  context api call 
 
-     const {user}=useContext(AuthContext) ;
+     const {user}=useContext(AuthContext) ; 
 
+
+
+     
 
     
   return (
     <div>
       <div className="drawer lg:drawer-open">
         <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content flex flex-col items-center justify-center">
+        <div className="drawer-content flex flex-col items-center justify-center "> 
+        
+         <div className="w-full bg-gradient-to-l from-gray-700 via-gray-900 to-black mb-auto p-1">
+            
+               <div className="flex items-center justify-end gap-2">
+                    
+                  <button className="p-2 bg-red-600 text-white rounded">Logout</button>
+                  <img src={user?.photoURL} className="w-12 h-12 rounded-full" alt="" />
+
+               </div>
+
+         </div> 
+         
           {/* Page content here */} <Outlet/>
           <label
             htmlFor="my-drawer-2"
@@ -31,7 +47,7 @@ const DashBoardLayout = () => {
             aria-label="close sidebar"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 w-60 min-h-full bg-[#5041BC] text-base-content ">
+          <ul className="menu p-4 w-60 min-h-full bg-gradient-to-r from-gray-700 via-gray-900 to-black text-base-content ">
             {/* Sidebar content here */} 
             <li 
                
@@ -53,14 +69,27 @@ const DashBoardLayout = () => {
                 user && <ul>
                  <li className="font-serif"><Link><div className="flex border rounded bg-white w-44 p-2 text-[#5041BC]  items-center gap-2 justify-center font-bold text-[16px]"><Icon icon="solar:home-bold" /><p>User Home</p></div></Link></li>
 
-                 <li className="font-serif"><Link><div className="flex border rounded bg-white w-44 p-2  items-center gap-2 justify-center font-bold text-[#5041BC] text-[16px]"><Icon icon="mingcute:love-fill" /><p>Love Cart</p></div></Link></li>
+                 <li className="font-serif"><Link to="/dashboard/user/loveCart"><div className="flex border rounded bg-white w-44 p-2  items-center gap-2 justify-center font-bold text-[#5041BC] text-[16px]"><Icon icon="mingcute:love-fill" /><p>Love Cart</p></div></Link></li>
 
-                 <li className="font-serif"><Link><div className="flex border rounded bg-white w-44 p-2  items-center gap-2 justify-center font-bold text-[#5041BC] text-[16px]"><Icon icon="mdi:cart" /><p>Coffee Cart</p></div></Link></li>
+                 <li className="font-serif"><Link to="/dashboard/user/cart"><div className="flex border rounded bg-white w-44 p-2  items-center gap-2 justify-center font-bold text-[#5041BC] text-[16px]"><Icon icon="mdi:cart" /><p>Coffee Cart</p></div></Link></li>
+
+                 <li className="font-serif"><Link to="/dashboard/user/paymentHistory"><div className="flex border rounded bg-white w-44 p-2  items-center gap-2 justify-center font-bold text-[#5041BC] text-[14px]"><Icon icon="fluent:payment-16-filled" /><p>Payment History</p></div></Link></li> 
+
+                 <hr className="divider" /> 
+
+                 <li className="font-serif"><Link to="/"><div className="flex border rounded bg-white w-44 p-2 text-[#5041BC]  items-center gap-6 justify-center font-bold text-[16px]"><Icon icon="solar:home-bold" /><p> Home</p></div></Link></li>
+
                 </ul>
-             }
+             } 
 
+
+
+
+             
            
-          </ul>
+          </ul> 
+
+         
         </div>
       </div>
     </div>

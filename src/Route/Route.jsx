@@ -7,6 +7,9 @@ import Main from "../Layouts/Main";
 import AllCoffee from "../Pages/Components/AllCoffee";
 import SingleCoffee from "../Pages/Components/SingleCoffee";
 import DashBoardLayout from "../Layouts/DashBoardLayout";
+import UserLoveCart from "../Pages/Dashboard/user/UserLoveCart";
+import UserCart from "../Pages/Dashboard/user/UserCart";
+import UserPaymentHistory from "../Pages/Dashboard/user/UserPaymentHistory";
 
 
 
@@ -41,8 +44,16 @@ const router = createBrowserRouter([
           element:<DashBoardLayout/>,
           children:[
              {
-                 path:"/dashboard/home",
-                 
+                path:'/dashboard/user/loveCart',
+                element:<UserLoveCart/>
+             },
+             {
+                path:"/dashboard/user/cart",
+                element:<UserCart/>
+             },
+             {
+                path:"/dashboard/user/paymentHistory",
+                element:<UserPaymentHistory/>
              }
           ]
     },
