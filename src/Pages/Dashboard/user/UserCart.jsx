@@ -60,7 +60,7 @@ const UserCart = () => {
   }
 
   return (
-    <div className="w-full h-full px-32 ">
+    <div className="w-full h-full px-32 singleBg ">
 
       <p className="text-3xl  thirdFont  mt-4 flex justify-center items-center text-[#5041BC] ">
         Your  Cart{" "}
@@ -68,7 +68,7 @@ const UserCart = () => {
       </p> 
 
       <div>
-      <div className="overflow-x-auto mt-10 bg-[#5041BC] rounded ">
+      <div className="overflow-x-auto mt-10 bg-[#5041BC] bg-opacity-40 rounded ">
   <table className="table">
     {/* head */}
     <thead>

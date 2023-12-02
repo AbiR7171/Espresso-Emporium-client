@@ -5,6 +5,7 @@ import axios from "axios";
 import { AuthContext } from "../../Route/AuthProvidor";
 import Swal from "sweetalert2";
 import useLoveCart from "../../Hooks/useLoveCart";
+import moment from "moment/moment";
 
 const SingleCoffee = () => {
 
@@ -46,6 +47,15 @@ const SingleCoffee = () => {
 
      const handleAddToCart = () =>{
 
+
+          axios.put(`http://localhost:5000/updateCartCount/${SingleCoffee[0]?._id}`,{
+            cart:SingleCoffee[0]?.cart
+          })
+          .then(res =>{
+                 console.log(res.data);
+          })
+
+
              axios.post('http://localhost:5000/addToCart', { 
     
                name: user?.displayName,
@@ -57,7 +67,8 @@ const SingleCoffee = () => {
                quantity:quantity,
                price: SingleCoffee[0]?.price_bdt,
                totalPrice:SingleCoffee[0]?.price_bdt * quantity,
-               coffee_id: SingleCoffee[0]?._id
+               coffee_id: SingleCoffee[0]?._id,
+               date: moment().format('DD/mm/YYYY')
                   
                     
              }) 

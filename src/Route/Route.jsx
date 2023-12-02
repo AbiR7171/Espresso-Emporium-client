@@ -10,6 +10,14 @@ import DashBoardLayout from "../Layouts/DashBoardLayout";
 import UserLoveCart from "../Pages/Dashboard/user/UserLoveCart";
 import UserCart from "../Pages/Dashboard/user/UserCart";
 import UserPaymentHistory from "../Pages/Dashboard/user/UserPaymentHistory";
+import CheckOut from "../Pages/Dashboard/user/CheckOut";
+import UserHome from "../Pages/Dashboard/user/UserHome";
+import ChefHome from "../Pages/Dashboard/Chef/ChefHome";
+import AddNewCoffee from "../Pages/Dashboard/Chef/AddNewCoffee";
+import MyCoffee from "../Pages/Dashboard/Chef/MyCoffe";
+import AdminHome from "../Pages/Dashboard/Admin/AdminHome";
+import ManageUser from "../Pages/Dashboard/Admin/ManageUser";
+import ManageCoffe from "../Pages/Dashboard/Admin/ManageCoffe";
 
 
 
@@ -54,6 +62,38 @@ const router = createBrowserRouter([
              {
                 path:"/dashboard/user/paymentHistory",
                 element:<UserPaymentHistory/>
+             },
+             {
+                path:"/dashboard/user/checkout",
+                element:<CheckOut/>
+             },
+             {
+                path:"/dashboard/user/home",
+                element:<UserHome/>
+             },
+             {
+                path:'/dashboard/chef/home',
+                element:<ChefHome/>
+             },
+             {
+                path:"/dashboard/chef/addNew",
+                element:<AddNewCoffee/>
+             },
+             {
+                path:"/dashboard/chef/myCoffee",
+                element:<MyCoffee/>
+             },
+             {
+                path:"/dashboard/admin/home",
+                element:<AdminHome/>
+             },
+             {
+                path:"/dashboard/admin/manageUser",
+                element:<ManageUser/>
+             },
+             {
+                path:"/dashboard/admin/manageCoffee",
+                element:<ManageCoffe/>
              }
           ]
     },

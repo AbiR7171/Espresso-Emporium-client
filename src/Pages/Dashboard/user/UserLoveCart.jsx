@@ -60,13 +60,13 @@ const UserLoveCart = () => {
 
       }
     return (
-        <div className='w-full h-full bg-white px-20'> 
+        <div className='w-full h-full bg-white px-20 singleBg'> 
 
           <p className='text-3xl  thirdFont  mt-4 flex justify-center items-center text-[#5041BC]'>Your Love Cart <Icon icon="mingcute:love-fill" 
           className='text-[#5041BC] text-7xl'
           /></p> 
 
-   <div className='bg-[#5041BC] p-2 rounded text-white'>
+   <div className='bg-[#5041BC] bg-opacity-40 p-2 rounded text-white'>
            
    <div className="overflow-x-auto mt-10 ">
   <table className="table">

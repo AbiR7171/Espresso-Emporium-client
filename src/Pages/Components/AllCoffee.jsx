@@ -7,6 +7,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Route/AuthProvidor';
 import useLoveCart from '../../Hooks/useLoveCart';
+import moment from 'moment/moment';
 
 const AllCoffee = () => {  
 
@@ -95,6 +96,17 @@ const AllCoffee = () => {
               
           }else{ 
 
+
+            axios.put(`http://localhost:5000/updateLoveCount/${coffee._id}`,{
+              love: coffee?.love
+            })
+            .then(res =>{
+              console.log(res.data);
+            })
+
+
+
+
             axios.post(`http://localhost:5000/addLoveCart`, { 
 
             coffee_name: coffee.coffee_name,
@@ -103,7 +115,8 @@ const AllCoffee = () => {
             price: coffee.price_bdt,
             chef: coffee.chef,
             chef_img: coffee.chef_img,
-            email: user?.email
+            email: user?.email,
+            date: moment().format('DD/mm/YYYY')
 
             })
             .then(res =>{

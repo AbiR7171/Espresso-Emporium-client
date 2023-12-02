@@ -71,3 +71,9 @@ body{
 .bgDashBoard{
   background: rgba(61, 41, 208, 1);
 }
+
+
+.clip{
+  
+  clip-path: polygon(100% 0, 98% 10%, 98% 42%, 98% 91%, 100% 100%, 32% 100%, 0 100%, 0% 43%, 0 0);
+}
