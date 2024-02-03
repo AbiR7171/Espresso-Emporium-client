@@ -12,19 +12,19 @@ const Navbar = () => {
   const[show, SetShow]=useState(false)
 
     return (
-        <div className='navBack flex items-center '>
+        <div onClick={()=> SetShow(!show)} className='navBack flex items-center '>
 
-            <div className='flex justify-between items-center gap-2 container mx-auto '>
+            <div className='flex justify-between items-center lg:gap-2 gap-8  container mx-auto '>
 
                <div className='flex items-center '>
 
                <img src={logo} alt="logo" className='w-14' />
 
-                <p className='text-white  text-2xl mainFont'>Espresso Emporium</p>
+                <p className='text-white  lg:text-2xl mainFont'>Espresso Emporium</p>
 
                </div>
 
-               <ul className='flex items-center gap-5'>
+               <ul className='flex items-center lg:gap-5 gap-2'>
 
              <li title='Home'>  <Link to="/"><Icon icon="solar:home-bold-duotone" className='text-red-200 text-4xl' /></Link></li>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
              }
             </div>
  
-                <div 
+                <div onClick={()=> SetShow(false)}
                 className={`bg-black w-64 mainFont rounded-xl p-6 mt-52 absolute z-20 ${show ? " right-3 -top-36 duration-500" :  "-top-[500px] duration-500 right-0  "} `}
                 > 
 

@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 
 const ChefDeatiels = ({singleChefData}) => {
     return (
-        <div className=" grid grid-cols-2 gap-4 p-4 rounded-lg  bg-gray-200   w-9/12 me-56 h-64">
+        <div className=" grid lg:grid-cols-2 gap-4 p-4 rounded-lg  bg-gray-200   lg:w-9/12 lg:me-56 lg:h-64">
       
           <img
             src={singleChefData?.photo}
@@ -23,14 +23,14 @@ const ChefDeatiels = ({singleChefData}) => {
             />
           </p>
 
-          <p className="text-[#1B1A1A] font-bold text-2xl mainFont">
+          <p className="text-[#1B1A1A] font-bold lg:text-2xl mainFont">
             Name:{" "}
             <span className="text-[#5C5B5B] font-normal">
               {singleChefData.name}
             </span>
           </p>
          
-          <p className="text-[#1B1A1A] font-bold text-2xl mainFont">
+          <p className="text-[#1B1A1A] font-bold lg:text-2xl mainFont">
             {" "}
             Email:{" "}
             <span className="text-[#5C5B5B] font-normal">

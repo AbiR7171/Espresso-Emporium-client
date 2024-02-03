@@ -107,7 +107,7 @@ const SingleCoffee = () => {
 
   return (
     <div className="singleBg  flex items-center justify-center ">
-      <div className=" grid grid-cols-2 gap-4 p-4 rounded-lg  bg-gray-200  mt-32 w-9/12 me-56  h-[400px] ">
+      <div className=" grid lg:grid-cols-2 grid-cols-1 gap-4 p-4 rounded-lg  bg-gray-200  lg:mt-32 lg:w-9/12 lg:me-56  lg:h-[400px] h-full ">
         <div className=" relative">
           <img
             src={singleCoffee[0]?.coffee_picture}

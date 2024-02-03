@@ -21,7 +21,7 @@ const SingleChefs = () => {
 
     console.log(singleChefData);
     return (
-        <div className="singleBg mt-10 px-20 ">
+        <div className="singleBg mt-10 lg:px-20 ">
 
               <ChefDeatiels singleChefData={singleChefData}/> 
 
@@ -36,7 +36,7 @@ const SingleChefs = () => {
                  '>{singleChefData?.name} Coffee Gallery <Icon icon="solar:gallery-bold" /></p>
 
 
-                 <div  className='grid  grid-cols-2 gap-4 mt-10 '>
+                 <div  className='grid  lg:grid-cols-2 lg:gap-4 mt-10 '>
                        {
                           chefAllCoffee?.map( (coffee) => <CoffeeCard coffee={coffee}/> )
                        }

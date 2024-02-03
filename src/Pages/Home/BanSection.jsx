@@ -6,7 +6,7 @@ import icon4 from "../../assets/images/icons/4.png"
 
 const BanSection = () => {
     return (
-        <div className='bg-[#ECEAE3] font-serif flex py-8 px-32 gap-4 text-[#331A15]'>
+        <div className='bg-[#ECEAE3] font-serif grid lg:grid-cols-4 grid-cols-2 py-8 lg:px-32 px-2 gap-4 text-[#331A15]'>
 
             <div>
                 <img src={icon1} alt="" />

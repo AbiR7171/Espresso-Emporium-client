@@ -11,13 +11,13 @@ import img6 from "../../assets/images/6.png"
 const Popular = () => {
     return (
         <div className='mt-20'>
-             <img src={leftImg} alt="" className='absolute left-0 top-[900px]' />
+             <img src={leftImg} alt="" className='absolute left-0 top-[900px] ' />
              <img src={rightImg} className='absolute right-0' alt="" />
             <div className='text-center '>
             <p> - - -Sip & Savor - - -</p>
             <h2 className="text-3xl secFont font-bold text-[#331A15]">Our Popular Products</h2>
             </div>
-            <div className='container mx-auto px-32 grid grid-cols-2 gap-5 mt-32 ms-5 font-serif'>
+            <div className='container mx-auto lg:px-32 grid lg:grid-cols-2 grid-cols-1 lg:gap-5 gap-2 mt-32 lg:ms-5 font-serif'>
 
                 <div className='flex items-center bg-[#F5F4F1] rounded-lg gap-4 '>
                     <img src={img1} className='hover:scale-150 duration-500' alt="" />

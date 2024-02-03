@@ -9,9 +9,9 @@ const Footer = () => {
     const splitLocation = location.pathname.split("/");
     console.log(splitLocation[1]);
     return (
-        <div className={`bg-[#F5F4F1] footerBg font-serif flex items-center ${splitLocation[1] === "singleChef" && "hidden"}`}>
+        <div className={`bg-[#F5F4F1] footerBg font-serif lg:flex items-center ${splitLocation[1] === "singleChef" && "hidden"}`}>
 
-            <div className=' container mx-auto px-32'>
+            <div className=' container mx-auto lg:px-32 px-4'>
                  <img src={logo} alt=""  className='w-24'/>
                  <p className='text-3xl mainFont font-bold'>Expresso Emporium</p>
                  <p className='mt-6'>Always ready to be your friend. Come & Contact with us to share your <br /> memorable moments, to share with your best companion.</p>
@@ -32,7 +32,7 @@ const Footer = () => {
                  
             </div>
 
-            <div className='container mx-auto flex flex-col items-start mt-32 mb-20 '>
+            <div className='container mx-auto flex flex-col items-start lg:mt-32 mt-10 mb-20  px-4 '>
                 <h2 className="text-2xl">Connect with Us</h2>
 
                 <input type="text" className='w-3/4 h-11 rounded-md'  placeholder='    Name' />

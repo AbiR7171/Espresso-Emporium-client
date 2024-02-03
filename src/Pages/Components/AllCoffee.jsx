@@ -182,10 +182,10 @@ const AllCoffee = () => {
 
     return (
         <div
-        className='container mx-auto px-20 '
+        className='container mx-auto lg:px-20 '
         > 
 
-            <h2 className="text-center mainFont mt-20 text-3xl">Select Your Favorite Coffee</h2> 
+            <h2 className="text-center mainFont mt-20 lg:text-3xl ">Select Your Favorite Coffee</h2> 
 
                    <div className='w-full flex justify-end mt-10 relative'>
                        <input ref={searchRef} type="text" placeholder="Search Your Favorite Coffee here" className="input input-bordered input-error w-full max-w-xs" /> 
@@ -193,7 +193,7 @@ const AllCoffee = () => {
                    </div>
 
              <div 
-             className={`grid grid-cols-2 gap-5  mt-10`}
+             className={`grid lg:grid-cols-2 lg:gap-5   mt-10`}
              >
 
                 {

@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
-        <div className='bannerBack'>
+        <div className='bannerBack flex justify-center items-center'>
 
-           <div className='ms-96 pt-64 ps-64 pe- space-y-3'>
+           <div className='lg:ms-96 lg:pt-64 lg:ps-64 pe- lg:space-y-3 space-y-2 p-3'>
 
-               <h2 className=" text-white text-3xl mainFont">
+               <h2 className=" text-white text-3xl mainFont p-2">
                 Would you like a Cup of Delicious Coffee?
                </h2>
 
@@ -16,7 +16,7 @@ const Banner = () => {
 
               <Link to="/allCoffee">
               
-                <button className='bg-[#E3B577] text-[#242222] p-3 rounded font-serif'>
+                <button className='bg-[#E3B577] text-[#242222] p-3 rounded font-serif mt-4'>
                 Learn More
                 </button>
               </Link>

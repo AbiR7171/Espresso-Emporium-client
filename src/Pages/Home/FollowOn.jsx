@@ -16,9 +16,9 @@ const FollowOn = () => {
                 <h2 className="text-3xl secFont ">Follow On Instagram</h2>
             </div>
 
-            <div className='container mx-auto grid grid-cols-4 gap-2 mt-10 px-32'>
+            <div className='container mx-auto grid lg:grid-cols-4 grid-cols-2 px-3 gap-2 mt-10 lg:px-32'>
                  <img src={img1} alt="" className='hover:scale-125 duration-500' />
-                 <img src={img2} alt="" className='hover:scale-125 duration-500' />
+                 <img src={img2} alt="" className='hover:scale-125 duration-500  size-44' />
                  <img src={img3} alt="" className='hover:scale-125 duration-500' />
                  <img src={img4} alt="" className='hover:scale-125 duration-500' />
                  <img src={img5} alt="" className='hover:scale-125 duration-500' />
