@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+body{
+  background-color: white;
+}
+
+.navBack{
+  background-image: url(./assets/images/more/15.jpg);
+  height: 4rem;
+  max-width: 100vw;
+  object-fit: cover;
+}
+
+.bannerBack{
+  background-image: url(./assets/images/more/3.png);
+  height: 35rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.footerBg{
+  background-image: url(./assets/images/more/13.jpg);
+  height: 30rem;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 50px;
+  
+}
+
+.formBg{
+  background-image: url(./assets/images/more/17.jpg);
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ 
+}
+.singleBg{
+  background-image: url(./assets/images/more/1.png);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+ 
+}
+
+.mainFont{
+  font-family: 'Lugrasimo', cursive;
+}
+
+.secFont{
+  font-family: 'Lilita One', cursive;
+}
+.thirdFont{
+  font-family: 'Pacifico', cursive;
+}
+
+.lastFont{
+  font-family: 'Dancing Script', cursive;
+
+} 
+
+
+.bgDashBoard{
+  background: rgba(61, 41, 208, 1);
+}
+
+
+.clip{
+  
+  clip-path: polygon(100% 0, 98% 10%, 98% 42%, 98% 91%, 100% 100%, 32% 100%, 0 100%, 0% 43%, 0 0);
+}
