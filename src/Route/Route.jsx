@@ -19,6 +19,7 @@ import AdminHome from "../Pages/Dashboard/Admin/AdminHome";
 import ManageUser from "../Pages/Dashboard/Admin/ManageUser";
 import ManageCoffe from "../Pages/Dashboard/Admin/ManageCoffe";
 import SingleChefs from "../Pages/Components/SingleChefs";
+import PrivateRoute from "./PrivateRoute";
 
 
 
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
             },
             {
                 path:"/singleCoffee/:id",
-                element:<SingleCoffee/>,
+                element:<PrivateRoute><SingleCoffee/></PrivateRoute>,
                 loader:({params})=> fetch(`http://localhost:5000/coffee/${params.id}`)
             },
             {

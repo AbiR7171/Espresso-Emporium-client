@@ -2,13 +2,14 @@ import React, { useContext } from 'react';
 import signUp from "../../assets/images/404/signUp.jpg"
 import { AuthContext } from '../../Route/AuthProvidor';
 import Swal from 'sweetalert2';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import moment from 'moment/moment';
 
 const SignUp = () => {
 
   const {HandleCreateUser, handleProfile}=useContext(AuthContext)
+  const naviagete = useNavigate()
 
   const handleForm = event =>{
 
@@ -46,6 +47,7 @@ const SignUp = () => {
       .then(res =>{
             console.log(res.data);
             if(res.data.insertedId){ 
+              naviagete("/")
 
               const newUser = result.user;
               handleProfile(newUser, name, photo)

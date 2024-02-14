@@ -12,7 +12,7 @@ const Navbar = () => {
   const[show, SetShow]=useState(false)
 
     return (
-        <div onClick={()=> SetShow(!show)} className='navBack flex items-center '>
+        <div className='navBack flex items-center '>
 
             <div className='flex justify-between items-center lg:gap-2 gap-8  container mx-auto '>
 

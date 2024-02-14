@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import signUp from "../../assets/images/404/signIn.jpg"
 import { AuthContext } from '../../Route/AuthProvidor';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
 const SignIn = () => {
 
 
   const {signIn}=useContext(AuthContext)
+
+  const naviagete = useNavigate()
 
    const handelSignIn = e =>{
         
@@ -19,6 +21,7 @@ const SignIn = () => {
             signIn(email, password)
             .then(result =>{
                     console.log(result.user);
+                      naviagete("/")
                     const Toast = Swal.mixin({
                       toast: true,
                       position: 'top-end',

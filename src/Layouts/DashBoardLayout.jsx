@@ -20,7 +20,7 @@ const DashBoardLayout = () => {
     const [isChef] = useIsChef();
     const [isAdmin] = useIsAdmin();
 
-    const isClient = isChef && isAdmin
+    const isClient =  !isChef && !isAdmin
 
     console.log(isChef, "chef");
     console.log(isAdmin, "admin");
